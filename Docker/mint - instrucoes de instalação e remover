@@ -1,0 +1,46 @@
+// primeiramente para maiores intrucoes direto da pagina segue o link:
+// https://docs.docker.com/
+
+//Este documento criado por Gabriel Bottecchia Sena, serve para documentar e arquivas o 
+//metodos e comandos para instalacao e ultilização do docer respectivamente
+
+
+sudo rm /etc/apt/sources.list.d/docker.list
+
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu jammy stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo docker run hello-world //test
+
+//ou dar para intalar .deb
+wget https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/docker-ce_24.0.7-1~ubuntu.22.04~jammy_amd64.deb
+
+sudo dpkg -i *.deb
+sudo apt --fix-broken install -y
+
+
+//para instalar a interface grafica
+
+sudo apt install ./docker-desktop-amd64.deb
+
+
+//alguns comandos e instrucoes
+//Listar containers em execução:
+docker ps
+
+//Listar todas as imagens baixadas:
+docker images
+
+//Parar/remover containers:
+docker stop <ID_CONTAINER>
+docker rm <ID_CONTAINER>
+
+//Habilitar Docker sem sudo
+sudo usermod -aG docker $USER
+newgrp docker  # Recarrega as permissões

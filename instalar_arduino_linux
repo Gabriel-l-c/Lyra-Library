@@ -1,0 +1,65 @@
+Manual para Instalar e Criar Atalho do Arduino IDE 2.x (AppImage) no Ubuntu
+Passo 1 — Tornar o arquivo AppImage executável
+
+chmod +x /CAMINHO/DO/ARQUIVO/arduino-ide_2.3.6_Linux_64bit.AppImage
+
+Passo 2 — Mover o AppImage para uma pasta permanente (opcional, mas recomendado)
+
+mkdir -p ~/.local/bin
+mv /CAMINHO/DO/ARQUIVO/arduino-ide_2.3.6_Linux_64bit.AppImage ~/.local/bin/arduino-ide
+
+Passo 3 — Criar o arquivo de atalho para o menu de aplicativos
+
+Abra o editor para criar o arquivo .desktop:
+
+nano ~/.local/share/applications/arduino-ide.desktop
+
+Cole o conteúdo abaixo, substituindo USUARIO pelo seu nome de usuário do Linux:
+
+[Desktop Entry]
+Name=Arduino IDE 2
+Exec=/home/USUARIO/.local/bin/arduino-ide
+Icon=/home/USUARIO/.local/share/icons/arduino-ide.png
+Type=Application
+Categories=Development;Electronics;
+Comment=Arduino IDE 2 AppImage
+Terminal=false
+
+Passo 4 — (Opcional) Baixar um ícone para o Arduino
+
+mkdir -p ~/.local/share/icons
+curl -Lo ~/.local/share/icons/arduino-ide.png https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg
+
+Passo 5 — Atualizar o banco de dados de atalhos
+
+update-desktop-database ~/.local/share/applications/
+
+Passo 6 — Usar o Arduino IDE
+
+Agora, basta procurar por "Arduino IDE 2" no menu de aplicativos e abrir normalmente.
+Variáveis que você deve substituir:
+
+    /CAMINHO/DO/ARQUIVO/arduino-ide_2.3.6_Linux_64bit.AppImage → caminho onde você baixou o arquivo AppImage
+
+    USUARIO → seu nome de usuário no Linux (exemplo: gabriellyra)
+
+
+OU INSTALAR SO POR PROMPT PARA TODAS AS CONTAS:
+
+cd ~/Downloads
+wget https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.3_Linux_64bit.AppImage
+
+chmod +x arduino-ide_2.3.3_Linux_64bit.AppImage
+
+sudo mv arduino-ide_2.3.3_Linux_64bit.AppImage /opt/arduino-ide.AppImage
+
+sudo tee /usr/share/applications/arduino-ide.desktop <<EOF
+[Desktop Entry]
+Name=Arduino IDE 2
+Exec=/opt/arduino-ide.AppImage
+Icon=arduino
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+EOF
+

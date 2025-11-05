@@ -1,0 +1,20 @@
+link test basico:
+https://www.youtube.com/watch?v=N4uf23x4vmM
+
+esp8266 tutorial:
+https://www.emqx.com/en/blog/esp8266-connects-to-the-public-mqtt-broker
+
+
+instalar nodejs e npm
+
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+rodar node red localmente:
+ 
+node-red
+
+
+server -> test.mosquitto.org // usar nas configurações
+
+

@@ -1,0 +1,13 @@
+no display a seguinte configuração deve ser add ou descomentada no arquivo geral de configuração para funcionar:
+
+ #define TFT_INVERSION_OFF
+
+e 
+
+
+#define TFT_MOSI  16  // Automatically assigned with ESP8266 if not defined
+#define TFT_SCLK  17  // Automatically assigned with ESP8266 if not defined
+
+#define TFT_CS    2  // Chip select control pin D8
+#define TFT_DC    4  // Data Command control pin
+#define TFT_RST   5  // Reset pin (could connect to NodeMCU RST, see next line)

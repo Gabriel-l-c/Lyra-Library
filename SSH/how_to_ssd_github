@@ -1,0 +1,16 @@
+
+Scipt inicial:
+
+
+ssh-keygen -t ed25519 -C "gabriellyra.c@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_github
+cat ~/.ssh/id_ed25519.pub
+
+
+
+script depois de ctrl c e ctrl v no github(confirmação de sucesso):
+
+ssh -T git@github.com
+
+

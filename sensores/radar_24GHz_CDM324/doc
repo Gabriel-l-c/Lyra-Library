@@ -1,0 +1,33 @@
+informacoes basicas:
+
+ransmitting Frequency: min:24GHz typ:24.125GHz :24.25GHz
+Output Power:16dbm (typ)
+Antenna pattern: horizontal direction: typ.80, vertical direction: typ.32
+Side lobe suppression ratio: horizontal direction: typ.13dB, vertical direction: typ.13dB
+Operating Temperature: -20 ~ 60°
+Operating Current: typ:30MA, :40MA
+Operating Voltage: typ:5.5V
+Pulse Width: typ:10US
+IF Output: -300 ~ 300MV
+Size: 25 x 25 x 7mm
+Weight: 5g
+
+Link hackday(Doppler Speed Sensor Puts FFT And AGC To Work):
+
+https://hackaday.com/tag/cdm324/
+
+
+link hackday (
+A Radar Module Teardown And Measuring Fan Speed The Hard Way):
+https://hackaday.com/2018/08/14/a-radar-module-teardown-and-measuring-fan-speed-the-hard-way/
+
+link github (limpkin /cdm324_fft) :
+https://github.com/limpkin/cdm324_fft/blob/main/fw/Core/Src/user/expander_board.c#L76
+
+link teorico limpkin(Making the Electronics for a 24GHz Doppler Sensor):
+https://www.limpkin.fr/index.php?post/2017/02/22/Making-the-Electronics-for-a-24GHz-Doppler-Motion-Sensor
+
+link youtube ( TSP #130 - Tutorial, Experiment & Teardown of a CDM324 24GHz Doppler Radar Module ):
+https://www.youtube.com/watch?v=5vqSX40seqA
+
+

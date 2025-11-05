@@ -1,0 +1,12 @@
+Instalar flatpak
+
+sudo apt install flatpak
+
+Adicionar o repositório Flathub
+
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+Atualizar 
+
+flatpak update
+

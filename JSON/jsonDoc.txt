@@ -1,0 +1,7 @@
+link json org;
+https://json-ld.org/
+
+link iot agent ngsi-ld :
+https://ngsi-ld-tutorials.readthedocs.io/en/latest/iot-agent-json.html
+
+
